@@ -121,4 +121,172 @@
       }
     }
   }
+  .whoContainer {
+    padding: 10% 10% 5% 10%;
+    background-color: var(--clr-cream);
+
+    .topContainer {
+      @extend .flexRow;
+      position: relative;
+      justify-content: center;
+      .who {
+        @extend .flexCol;
+        align-items: center;
+      }
+      .imageContainer {
+        position: absolute;
+        right: -10%;
+      }
+    }
+    h2 {
+      margin-top: 7%;
+      margin-bottom: 3%;
+      font-family: "Lato", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      text-align: center;
+    }
+    h4 {
+      font-size: 2rem;
+      text-align: center;
+      span {
+        color: var(--clr-purple);
+      }
+    }
+    .excuseGeneratorContainer {
+      margin-top: 10%;
+      padding: 10%;
+      padding-bottom: 3%;
+      background-color: var(--clr-purple);
+      color: var(--clr-text-light);
+      > h1,
+      > p {
+        text-align: center;
+      }
+      > p {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      > h1 {
+        text-transform: uppercase;
+      }
+      .content {
+        margin: 10% 0px;
+        @extend .flexRow;
+        justify-content: flex-start;
+        height: 100vh;
+        .leftContainer {
+          overflow: auto;
+          @extend .flexCol;
+          justify-content: flex-start;
+          max-width: 40%;
+          padding: 20px;
+          height: 100%;
+          border-radius: 10px;
+          border: 5px solid var(--clr-black);
+          box-shadow: 5px 5px 0px 5px #88d387;
+          background-color: var(--clr-cream);
+          color: var(--clr-text-dark);
+
+          span {
+            margin: 10px 5px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            input {
+              width: 200px;
+              margin-left: 10px;
+              background-color: transparent;
+              padding: 4px;
+              border: 2px solid var(--clr-text-dark);
+              border-radius: 3px;
+              outline: none;
+            }
+          }
+          .divider {
+            width: 95%;
+            height: 1px;
+            background-color: var(--clr-text-dark);
+          }
+        }
+        .rightContainer {
+          @extend .flexCol;
+          height: 100%;
+          justify-content: flex-start;
+          margin-left: 20px;
+          padding: 20px;
+          > h4 {
+            font-size: 2.5rem;
+            margin: 20px 0px;
+          }
+          span,
+          label {
+            font-size: 1.5rem;
+            font-weight: 700;
+          }
+          .slidersContainer {
+            margin: 5% 0px;
+            border: 2px solid #ac6eeb;
+            border-radius: 10px;
+            padding: 30px;
+            input {
+              width: 250px;
+            }
+            .labelsContainer {
+              @extend .flexRow;
+              justify-content: space-between;
+            }
+          }
+          button {
+            cursor: pointer;
+            margin-bottom: 20px;
+            color: var(--clr-text-dark);
+            font-weight: 900;
+            background-color: #ffca49;
+            padding: 10px 30px;
+            border: 3px solid var(--clr-text-dark);
+            border-radius: 5px;
+            box-shadow: 5px 5px 0px 0px #e59bd5;
+          }
+
+          .inputContainer {
+            @extend .flexCol;
+            margin: 5px 0px;
+            label {
+              font-size: 1.5rem;
+            }
+            input {
+              margin: 10px 0px;
+              color: var(--clr-text-light);
+              font-size: 2rem;
+              font-weight: 700;
+              width: 300px;
+              outline: none;
+              border: none;
+              background-color: transparent;
+              border-bottom: 2px solid var(--clr-text-light);
+            }
+          }
+        }
+      }
+    }
+  }
+  .FAQContainer {
+    padding: 10% 5% 5% 5%;
+    .topContainer {
+      @extend .flexRow;
+      position: relative;
+      justify-content: center;
+      .who {
+        @extend .flexCol;
+        align-items: center;
+        > h1 {
+          text-transform: uppercase;
+        }
+      }
+      .imageContainer {
+        position: absolute;
+        left: -10%;
+      }
+    }
+  }
 }
