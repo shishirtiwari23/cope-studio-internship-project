@@ -1,0 +1,18 @@
+//breakpoints
+$screen-xl: 1800px;
+$screen-lg: 1300px;
+$screen-md: 1100px;
+$screen-sm: 900px;
+$screen-xs: 400px;
+
+.flexRow {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

@@ -1,0 +1,62 @@
+@import "./utils/commons.scss";
+
+//variables
+:root {
+  //colors
+  --clr-blue: #2c3eda;
+  --clr-purple: #6d0cba;
+  --clr-cream: #f1ead9;
+  --clr-yellow: #ffca49;
+  --clr-black: #2a2a2a;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+html {
+  font-size: 16px;
+}
+h1,
+h2 {
+  font-family: "Abril Fatface", cursive;
+}
+h1 {
+  font-size: 7.5rem;
+}
+h2 {
+  font-size: 4.5rem;
+}
+h4 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: $screen-xl) {
+}
+@media screen and (max-width: $screen-lg) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: $screen-md) {
+  html {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: $screen-sm) {
+  html {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: $screen-xs) {
+  html {
+    font-size: 6px;
+  }
+}
