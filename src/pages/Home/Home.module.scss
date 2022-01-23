@@ -1,0 +1,124 @@
+@import "../../utils/commons.scss";
+
+.container {
+  .heroContainer {
+    background-color: var(--clr-purple);
+    color: var(--clr-text-dark);
+    header {
+      @extend .flexRow;
+      position: relative;
+      text-transform: uppercase;
+      justify-content: center;
+      color: var(--clr-text-light);
+      padding: 10px 10%;
+
+      .imageContainer {
+        position: absolute;
+        left: 10%;
+        width: 3%;
+        img {
+          width: 100%;
+        }
+      }
+      h4 {
+        font-family: "Abril Fatface", cursive;
+        font-size: 2rem;
+      }
+      p {
+        font-weight: 600;
+      }
+    }
+    .mainLine {
+      padding: 4% 20%;
+      text-transform: uppercase;
+      color: var(--clr-text-light);
+      text-align: center;
+    }
+    .whatContainer {
+      padding: 10% 10% 5% 10%;
+      border-radius: 50% 50% 0% 0% / 50% 50% 0% 0%;
+      background-color: var(--clr-cream);
+
+      h1 {
+        color: var(--clr-heading-dark);
+        text-transform: uppercase;
+      }
+      > .imagesContainer {
+        @extend .flexRow;
+        justify-content: space-between;
+        > .imageContainer:first-child {
+          align-self: center;
+        }
+        > .imageContainer:last-child {
+          align-self: flex-end;
+          margin-bottom: 30px;
+        }
+        > .centerContainer {
+          @extend .flexCol;
+          align-items: center;
+          .textContainer {
+            margin: 5%;
+
+            @extend .flexCol;
+            align-items: center;
+          }
+        }
+      }
+      > .textContainer {
+        padding: 10px 5%;
+        text-align: center;
+        span {
+          color: var(--clr-purple);
+        }
+      }
+    }
+    .whyContainer {
+      background-color: var(--clr-cream);
+      padding: 5% 10% 5% 10%;
+      .why {
+        @extend .flexCol;
+        align-items: center;
+        padding: 5% 0%;
+      }
+      h1 {
+        color: var(--clr-heading-dark);
+        text-transform: uppercase;
+      }
+    }
+  }
+  .howContainer {
+    padding: 5% 10% 5% 10%;
+    background-color: var(--clr-black);
+    color: var(--clr-text-light);
+    @extend .flexCol;
+    > * {
+      margin: 25px 0px;
+    }
+    overflow: hidden;
+    align-items: center;
+    .topContainer {
+      @extend .flexRow;
+      justify-content: center;
+      position: relative;
+      .imageContainer {
+        position: absolute;
+        right: -100%;
+        width: 220px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    > h4 {
+      font-size: 2.5rem;
+    }
+    .how {
+      @extend .flexCol;
+      align-items: center;
+
+      h1 {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

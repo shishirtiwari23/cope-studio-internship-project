@@ -1,0 +1,120 @@
+import onBoardingPhase from "../assets/images/onBoardingPhase.svg";
+import projectPhase from "../assets/images/projectPhase.svg";
+import embedPhase from "../assets/images/embedPhase.svg";
+import code from "../assets/images/code.png";
+import network from "../assets/images/network.png";
+import freedom from "../assets/images/freedom.png";
+
+export const whyCardData = [
+  {
+    serialNo: 1,
+    heading: (
+      <h2>
+        A path to <span>Web3</span> for you
+      </h2>
+    ),
+    description:
+      "The Web3 space evolves rapidly, but it can also discourage you from doing something new. Each of our fellows charts a unique course; together they have proven that young people can succeed in this new frontier by thinking for themselves instead of following a traditional track and competing on old career tracks.",
+    image: code,
+    color: "#8D9CEF",
+  },
+  {
+    serialNo: 2,
+    heading: (
+      <h2>
+        <span>Freedom</span> to get Stuff Done
+      </h2>
+    ),
+    description:
+      "Pursue ideas that matter instead of mandatory tests. Take on big risks instead of big debt. How you spend your time in the Fellowship is up to you — we’re here to help, but we won’t get in the way.",
+    image: freedom,
+    color: "#88D387",
+  },
+  {
+    serialNo: 3,
+    heading: (
+      <h2>
+        My <span>network</span> is yours
+      </h2>
+    ),
+    description:
+      "The hardest thing about being a young entrepreneur is that you haven’t met everyone you’ll need to know to make your venture succeed. We can help connect you — to investors, partners, prospective customers — in Silicon Valley and beyond.",
+    image: network,
+    color: "#E59BD5",
+  },
+];
+
+export const howCardData = [
+  {
+    id: 1,
+    title: "Onboarding Phase (3 weeks) ",
+    color: "#8D9CEF",
+    listItem: [
+      <li>
+        <p>
+          Feel at home as a Fellow and choose the next big thing you want to
+          build
+        </p>
+      </li>,
+      <li>
+        <p>
+          Attend workshops on Web3, technical and non-technical areas important
+          to your idea
+        </p>
+      </li>,
+      <li>
+        <p>
+          Get introduced to the other Fellowship members to build a strong bond
+          with
+        </p>
+      </li>,
+    ],
+    image: onBoardingPhase,
+  },
+  {
+    id: 2,
+    title: "Project Phase (8 weeks) ",
+    color: "#88D387",
+    listItem: [
+      <li>
+        <p>
+          Fellows form a squad and work together as a team or individually on a
+          specific project
+        </p>
+      </li>,
+      <li>
+        <p>
+          This phase is meant to mirror the ways Polygon engineers work as a
+          team to ship a project.
+        </p>
+      </li>,
+      <li>
+        <p>
+          The project receives feedback from investors, customers and Web3
+          founders
+        </p>
+      </li>,
+    ],
+    image: projectPhase,
+  },
+  {
+    id: 3,
+    title: "Embed Phase (6 weeks) ",
+    color: "#E59BD5",
+    listItem: [
+      <li>
+        <p>
+          Participants are matched with a Polygon team if they want to scale
+          their efforts to the next level
+        </p>
+      </li>,
+      <li>
+        <p>
+          The goal of this phase is to help set up the Fellows and projects up
+          to realize their true potential
+        </p>
+      </li>,
+    ],
+    image: embedPhase,
+  },
+];

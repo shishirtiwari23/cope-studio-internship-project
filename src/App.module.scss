@@ -8,6 +8,9 @@
   --clr-cream: #f1ead9;
   --clr-yellow: #ffca49;
   --clr-black: #2a2a2a;
+  --clr-text-dark: #333333;
+  --clr-heading-dark: #1f1f1f;
+  --clr-text-light: white;
 }
 
 *,
@@ -39,24 +42,21 @@ p {
 }
 
 @media screen and (max-width: $screen-xl) {
-}
-@media screen and (max-width: $screen-lg) {
   html {
     font-size: 14px;
   }
 }
-@media screen and (max-width: $screen-md) {
+@media screen and (max-width: $screen-lg) {
   html {
     font-size: 10px;
   }
 }
-@media screen and (max-width: $screen-sm) {
+@media screen and (max-width: $screen-md) {
   html {
     font-size: 8px;
   }
 }
+@media screen and (max-width: $screen-sm) {
+}
 @media screen and (max-width: $screen-xs) {
-  html {
-    font-size: 6px;
-  }
 }

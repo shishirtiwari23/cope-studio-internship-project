@@ -1,0 +1,32 @@
+@import "../../utils/commons.scss";
+
+.container {
+  border-radius: 150px;
+  width: 150%;
+  padding: 30px;
+  color: var(--clr-text-dark);
+  align-items: center;
+  .textContainer {
+    @extend .flexCol;
+    width: 40%;
+    margin: 0px 7%;
+    ul {
+      li {
+        font-size: 1.5rem;
+        margin: 10px;
+      }
+    }
+  }
+  h4 {
+    color: var(--clr-heading-dark);
+    font-weight: 900;
+    font-size: 2.5rem;
+  }
+  .imageContainer {
+    width: 200px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

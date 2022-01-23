@@ -7,7 +7,7 @@ $screen-xs: 400px;
 
 .flexRow {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
 }
 .flexCol {
