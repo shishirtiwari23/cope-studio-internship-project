@@ -20,12 +20,9 @@ const HowCard = ({ title, id, image, color, listItem, children }) => {
       </div>
       <div className={styles.textContainer}>
         <h4>{title}</h4>
-        <ul>
-          {listItem.map((item) => {
-            return item;
-          })}
-        </ul>
+        <ul>{listItem}</ul>
       </div>
+      {children}
     </div>
   );
 };

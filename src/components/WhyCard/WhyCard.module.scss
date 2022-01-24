@@ -7,7 +7,7 @@
   border-radius: 20px;
   margin: 4rem 0px;
   padding: 3rem;
-  height: 300px;
+
   .imageContainer {
     width: 20%;
     height: 250px;
@@ -29,10 +29,12 @@
       padding: 10px;
       border: 2px solid var(--clr-text-dark);
       border-radius: 50%;
+      margin: 10px 0px;
     }
     h2 {
       font-size: 2.5rem;
       font-family: "Lato", sans-serif;
+      margin: 10px 0px;
       font-weight: 900;
       span {
         color: #632bd9;
@@ -40,6 +42,21 @@
     }
     p {
       font-size: 1.8rem;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    height: fit-content;
+    flex-direction: column-reverse;
+    padding: 1rem;
+    .imageContainer {
+      width: 200px;
+    }
+    .textContainer {
+      width: 100%;
+      padding: 10px;
+      > h4:first-child {
+        margin: 10px 0px;
+      }
     }
   }
 }

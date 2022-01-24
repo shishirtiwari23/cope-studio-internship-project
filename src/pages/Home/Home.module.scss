@@ -33,12 +33,29 @@
       text-transform: uppercase;
       color: var(--clr-text-light);
       text-align: center;
+      @media screen and (max-width: 600px) {
+        padding: 4% 5%;
+        margin: 30px 0px;
+        h1 {
+          font-size: 5rem;
+        }
+      }
     }
     .whatContainer {
       padding: 10% 10% 5% 10%;
       border-radius: 50% 50% 0% 0% / 50% 50% 0% 0%;
       background-color: var(--clr-cream);
-
+      @media screen and (max-width: $screen-md) {
+        .imagesContainer {
+          .imageContainer {
+            display: flex;
+            justify-content: center;
+          }
+          img {
+            width: 80%;
+          }
+        }
+      }
       h1 {
         color: var(--clr-heading-dark);
         text-transform: uppercase;
@@ -71,14 +88,23 @@
           color: var(--clr-purple);
         }
       }
+      @media screen and (max-width: $screen-sm) {
+        border-radius: 110px 110px 0% 0% / 110px 110px 0% 0%;
+      }
     }
     .whyContainer {
       background-color: var(--clr-cream);
       padding: 5% 10% 5% 10%;
+      @extend .flexCol;
+      align-items: center;
       .why {
+        width: fit-content;
         @extend .flexCol;
         align-items: center;
         padding: 5% 0%;
+        img {
+          width: 100%;
+        }
       }
       h1 {
         color: var(--clr-heading-dark);
@@ -100,17 +126,41 @@
       @extend .flexRow;
       justify-content: center;
       position: relative;
-      .imageContainer {
-        position: absolute;
-        right: -100%;
-        width: 220px;
+      .how {
+        @extend .flexRow;
         img {
           width: 100%;
         }
       }
+      .imageContainer {
+        position: absolute;
+        right: -100%;
+        width: 220px;
+        @media screen and (max-width: $screen-md) {
+          width: 150px;
+          right: -50%;
+        }
+        @media screen and (max-width: 700px) {
+          width: 150px;
+          right: -40%;
+        }
+        @media screen and (max-width: 600px) {
+          right: 0;
+          position: relative;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+      }
     }
     > h4 {
       font-size: 2.5rem;
+      @media screen and (max-width: 600px) {
+        text-align: center;
+      }
     }
     .how {
       @extend .flexCol;
@@ -129,13 +179,34 @@
       @extend .flexRow;
       position: relative;
       justify-content: center;
+      margin: 20px 0px;
       .who {
         @extend .flexCol;
         align-items: center;
+        img {
+          width: 100%;
+          margin: 10px 0px;
+        }
       }
       .imageContainer {
         position: absolute;
         right: -10%;
+        width: 200px;
+        @media screen and (max-width: $screen-lg) {
+          img {
+            width: 80%;
+          }
+        }
+      }
+      @media screen and (max-width: 800px) {
+        flex-direction: column;
+
+        .imageContainer {
+          position: relative;
+          right: 0;
+          display: flex;
+          justify-content: center;
+        }
       }
     }
     h2 {
@@ -155,10 +226,14 @@
     }
     .excuseGeneratorContainer {
       margin-top: 10%;
+      margin: 10% 0px;
       padding: 10%;
       padding-bottom: 3%;
       background-color: var(--clr-purple);
       color: var(--clr-text-light);
+      @media screen and (max-width: 1000px) {
+        padding: 40px 30px;
+      }
       > h1,
       > p {
         text-align: center;
@@ -169,17 +244,22 @@
       }
       > h1 {
         text-transform: uppercase;
+        font-size: 4.5rem;
+        @media screen and (max-width: 600px) {
+          font-size: 3.5rem;
+        }
       }
       .content {
         margin: 10% 0px;
         @extend .flexRow;
         justify-content: flex-start;
         height: 100vh;
+
         .leftContainer {
           overflow: auto;
           @extend .flexCol;
           justify-content: flex-start;
-          max-width: 40%;
+          width: 40%;
           padding: 20px;
           height: 100%;
           border-radius: 10px;
@@ -200,6 +280,9 @@
               border: 2px solid var(--clr-text-dark);
               border-radius: 3px;
               outline: none;
+              @media screen and (max-width: $screen-lg) {
+                width: 150px;
+              }
             }
           }
           .divider {
@@ -214,9 +297,11 @@
           justify-content: flex-start;
           margin-left: 20px;
           padding: 20px;
+
           > h4 {
             font-size: 2.5rem;
             margin: 20px 0px;
+            text-align: left;
           }
           span,
           label {
@@ -230,10 +315,20 @@
             padding: 30px;
             input {
               width: 250px;
+              @media screen and (max-width: 1000px) {
+                width: 200px;
+              }
+              @media screen and (max-width: 600px) {
+                width: 100%;
+              }
             }
             .labelsContainer {
               @extend .flexRow;
               justify-content: space-between;
+            }
+            @media screen and (max-width: 600px) {
+              width: 100%;
+              padding: 20px;
             }
           }
           button {
@@ -264,9 +359,50 @@
               border: none;
               background-color: transparent;
               border-bottom: 2px solid var(--clr-text-light);
+              @media screen and (max-width: 1000px) {
+                width: 220px;
+              }
+              @media screen and (max-width: 600px) {
+                width: 100%;
+              }
+            }
+            @media screen and (max-width: 600px) {
+              width: 100%;
             }
           }
         }
+        @media screen and (max-width: 1000px) {
+          .leftContainer {
+            width: 60%;
+          }
+        }
+        @media screen and (max-width: 800px) {
+          margin-bottom: 0px;
+          flex-direction: column;
+          height: fit-content;
+          .rightContainer,
+          .leftContainer {
+            width: 80%;
+          }
+          .rightContainer {
+            margin: 20px 0px;
+            border-radius: 10px;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          .rightContainer,
+          .leftContainer {
+            width: 100%;
+          }
+          .rightContainer {
+            margin-left: 0px;
+            margin-top: 20px;
+            padding: 20px 0px;
+          }
+        }
+      }
+      @media screen and (max-width: 600px) {
+        margin: 10% -10%;
       }
     }
   }
@@ -276,16 +412,96 @@
       @extend .flexRow;
       position: relative;
       justify-content: center;
-      .who {
+      width: 100%;
+      .FAQ {
         @extend .flexCol;
         align-items: center;
+        img {
+          width: 100%;
+        }
         > h1 {
           text-transform: uppercase;
         }
       }
       .imageContainer {
         position: absolute;
-        left: -10%;
+        left: -8%;
+      }
+      @media screen and (max-width: 800px) {
+        .imageContainer {
+          left: -17%;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        flex-direction: column;
+        .imageContainer {
+          display: flex;
+          justify-content: center;
+          position: relative;
+          left: 0;
+          margin: 10% 0;
+        }
+      }
+    }
+    @media screen and (max-width: 600) {
+      padding: 10% 0% 5% 0%;
+    }
+  }
+  .joinContainer {
+    text-align: center;
+    color: white;
+    @extend .flexCol;
+    align-items: center;
+    background-color: #60189a;
+    padding: 5%;
+    padding-top: 50px;
+    .buttonsContainer {
+      margin: 20px 0px;
+    }
+    button {
+      cursor: pointer;
+      font-weight: 900;
+      color: var(--clr-heading-dark);
+      border: 5px solid var(--clr-heading-dark);
+      border-radius: 20px;
+      padding: 10px 20px;
+      background-color: transparent;
+      margin: 10px;
+      @media screen and (max-width: 600px) {
+        margin: 5px;
+      }
+      @media screen and (max-width: 505px) {
+        width: 200px;
+      }
+    }
+    .imagesContainer {
+      width: 100%;
+      @extend .flexRow;
+      margin: 20px 0;
+      img {
+        width: 100%;
+      }
+    }
+    .whiteLine {
+      height: 10px;
+      background-color: var(--clr-text-light);
+      width: 100%;
+    }
+    .nameAndLogo {
+      margin-right: auto;
+      @extend .flexRow;
+      div {
+        margin-left: 10px;
+        @extend .flexCol;
+        span {
+          font-size: 2rem;
+          text-transform: uppercase;
+          font-family: "Abril Fatface", cursive;
+          font-weight: 600;
+        }
+        span:last-child {
+          font-family: "Lato", sans-serif;
+        }
       }
     }
   }

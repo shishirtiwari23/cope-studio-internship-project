@@ -175,7 +175,7 @@ const Home = () => {
         </section>
         <section className={styles.FAQContainer}>
           <div className={styles.topContainer}>
-            <div className={styles.who}>
+            <div className={styles.FAQ}>
               <h1>Faq</h1>
               <img src={underline} alt="Underline" />
             </div>
@@ -196,6 +196,31 @@ const Home = () => {
             })}
           </div>
         </section>
+      </section>
+      <section className={styles.joinContainer}>
+        <h1>Join The Club</h1>
+        <div className={styles.buttonsContainer}>
+          <button>LinkedIn</button>
+          <button>Instagram</button>
+          <button>Telegram</button>
+          <button>Discord</button>
+        </div>
+        <div className={styles.imagesContainer}>
+          <div className={styles.whiteLine}></div>
+          <div>
+            <img src={fellowshipWelcome} alt="Welcome to Fellowship" />
+          </div>
+        </div>
+        <div className={styles.nameAndLogo}>
+          <div className={styles.logo}>
+            <img src={logo} alt="logo" />
+          </div>
+          <div>
+            <span>sandeep</span>
+            <span>nailwal</span>
+            <span>fellowship</span>
+          </div>
+        </div>
       </section>
     </div>
   );
