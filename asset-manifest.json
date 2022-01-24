@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cope-studio-internship-project/static/css/main.b03587b9.css",
-    "main.js": "/cope-studio-internship-project/static/js/main.fb464cd9.js",
+    "main.css": "/cope-studio-internship-project/static/css/main.e7cc2382.css",
+    "main.js": "/cope-studio-internship-project/static/js/main.17250f6f.js",
     "static/js/787.453c27a8.chunk.js": "/cope-studio-internship-project/static/js/787.453c27a8.chunk.js",
     "static/media/sandeep.svg": "/cope-studio-internship-project/static/media/sandeep.476e9bc26d9c5b97f200b8f860f0ecb9.svg",
     "static/media/onBoardingPhase.svg": "/cope-studio-internship-project/static/media/onBoardingPhase.42a1ad0f85aa56e801c2059fd4ba75c0.svg",
@@ -19,12 +19,12 @@
     "static/media/commentBubble.svg": "/cope-studio-internship-project/static/media/commentBubble.89e447dfefbf96a7d999fd6a893c8050.svg",
     "index.html": "/cope-studio-internship-project/index.html",
     "static/media/underline.svg": "/cope-studio-internship-project/static/media/underline.6e6c5495e045efaff8be588f1436e749.svg",
-    "main.b03587b9.css.map": "/cope-studio-internship-project/static/css/main.b03587b9.css.map",
-    "main.fb464cd9.js.map": "/cope-studio-internship-project/static/js/main.fb464cd9.js.map",
+    "main.e7cc2382.css.map": "/cope-studio-internship-project/static/css/main.e7cc2382.css.map",
+    "main.17250f6f.js.map": "/cope-studio-internship-project/static/js/main.17250f6f.js.map",
     "787.453c27a8.chunk.js.map": "/cope-studio-internship-project/static/js/787.453c27a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b03587b9.css",
-    "static/js/main.fb464cd9.js"
+    "static/css/main.e7cc2382.css",
+    "static/js/main.17250f6f.js"
   ]
 }
