@@ -8,33 +8,90 @@ import wondering from "../../assets/images/wondering.svg";
 import commentBubble from "../../assets/images/commentBubble.svg";
 import fellowshipWelcome from "../../assets/images/fellowshipWelcome.svg";
 import lookHere from "../../assets/images/lookHere.svg";
-import { WhyCard, HowCard, FAQCard, Gradient } from "../../components";
+import {
+  WhyCard,
+  HowCard,
+  FAQCard,
+  Gradient,
+  AnimatedText,
+} from "../../components";
 import { whyCardData, howCardData, FAQCardData } from "../../constants/data";
 import { motion } from "framer-motion";
+import lottie from "lottie-web";
+import gradientAnimation1 from "../../assets/animation/lf20_awowaeu5.json";
+import gradientAnimation2 from "../../assets/animation/lf20_xf6iginb.json";
+import gradientAnimation3 from "../../assets/animation/lf30_editor_7pk1v19q.json";
+import { useEffect, useRef } from "react";
 
-const animation = {
-  animate: {
+const HERO_TEXT = "I'll pay you $50,000 to build your wildest web3 idea";
+const container = {
+  visible: {
     transition: {
-      delayChildren: 0.6,
-      staggerChildren: 0.4,
-      staggerDirection: 1,
-    },
-  },
-};
-
-const wordAnimation = {
-  initial: {
-    y: 400,
-  },
-  animate: {
-    y: 0,
-    transition: {
-      duration: 1,
-      ease: [0.6, 0.01, -0.05, 0.9],
+      staggerChildren: 0.025,
     },
   },
 };
 const Home = () => {
+  const animationRef1 = useRef(null);
+  const animationRef2 = useRef(null);
+
+  const animationRef3 = useRef(null);
+  const animationRef4 = useRef(null);
+  const animationRef5 = useRef(null);
+
+  const animationRef6 = useRef(null);
+
+  function handleInputMouseEnter(theme) {
+    let cursor = document.getElementById("cursor");
+    cursor.classList.add(
+      theme === "light" ? styles.cursorHoverLight : styles.cursorHover
+    );
+  }
+  function handleInputMouseLeave(theme) {
+    let cursor = document.getElementById("cursor");
+    cursor.classList.remove(
+      theme === "light" ? styles.cursorHoverLight : styles.cursorHover
+    );
+  }
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: animationRef1.current,
+      loop: true,
+      autoplay: true,
+      animationData: gradientAnimation1,
+    });
+    lottie.loadAnimation({
+      container: animationRef2.current,
+      loop: true,
+      autoplay: true,
+      animationData: gradientAnimation2,
+    });
+    lottie.loadAnimation({
+      container: animationRef3.current,
+      loop: true,
+      autoplay: true,
+      animationData: gradientAnimation3,
+    });
+    lottie.loadAnimation({
+      container: animationRef4.current,
+      loop: true,
+      autoplay: true,
+      animationData: gradientAnimation1,
+    });
+    lottie.loadAnimation({
+      container: animationRef5.current,
+      loop: true,
+      autoplay: true,
+      animationData: gradientAnimation2,
+    });
+    lottie.loadAnimation({
+      container: animationRef6.current,
+      loop: true,
+      autoplay: true,
+      animationData: gradientAnimation3,
+    });
+  }, []);
   return (
     <div className={styles.container}>
       <section className={styles.heroContainer}>
@@ -47,23 +104,18 @@ const Home = () => {
             <p>Fellowship</p>
           </div>
         </header>
-        <section className={styles.mainLine}>
-          <motion.h1 variants={animation}>
-            <motion.span variants={wordAnimation}>I'll</motion.span>{" "}
-            <motion.span variants={wordAnimation}>pay</motion.span>{" "}
-            <motion.span variants={wordAnimation}>you</motion.span>{" "}
-            <motion.span variants={wordAnimation}>$50,000</motion.span>
-            <motion.span variants={wordAnimation}>to</motion.span>{" "}
-            <motion.span variants={wordAnimation}>build</motion.span>{" "}
-            <motion.span variants={wordAnimation}>your</motion.span>
-            <motion.span variants={wordAnimation}>wildest</motion.span>{" "}
-            <motion.span variants={wordAnimation}>web3</motion.span>{" "}
-            <motion.span variants={wordAnimation}>idea</motion.span>
-          </motion.h1>
-          {/* <Gradient className={styles.hehe} id="1" c1="#4AE0D7" c2="#7CB8FF" />
-          <Gradient className={styles.hehe} id="2" c1="#FFCA49" c2="#FFDB5C" />
-          <Gradient className={styles.hehe} id="3" c1="#CF9FFF" c2="#B163FF" /> */}
-        </section>
+        <div className={styles.animatedBlob1} ref={animationRef1}></div>
+        <div className={styles.animatedBlob2} ref={animationRef2}></div>
+        <div className={styles.animatedBlob3} ref={animationRef3}></div>
+
+        <motion.section
+          initial="hidden"
+          animate="visible"
+          variants={container}
+          className={styles.mainLine}
+        >
+          <AnimatedText text={HERO_TEXT} type="heading1" />
+        </motion.section>
         <section className={styles.whatContainer}>
           <div className={styles.imagesContainer}>
             <div className={styles.imageContainer}>
@@ -194,28 +246,55 @@ const Home = () => {
               <span>Define your voice and tone</span>
               <div className={styles.slidersContainer}>
                 <div className={styles.sliderContainer}>
-                  <input id="calm" type="range" />
+                  <input
+                    id="calm"
+                    type="range"
+                    onMouseEnter={handleInputMouseEnter}
+                    onMouseLeave={handleInputMouseLeave}
+                  />
                   <div className={styles.labelsContainer}>
                     <label htmlFor="calm">Calm</label>
                     <label htmlFor="candid">Roadies</label>
                   </div>
                 </div>
                 <div className={styles.sliderContainer}>
-                  <input id="candid" type="range" />
+                  <input
+                    id="candid"
+                    type="range"
+                    onMouseEnter={handleInputMouseEnter}
+                    onMouseLeave={handleInputMouseLeave}
+                  />
                   <div className={styles.labelsContainer}>
                     <label htmlFor="candid">Candid</label>
                     <label htmlFor="candid">Curry </label>
                   </div>
                 </div>
               </div>
-              <button>Share</button>
+              <button
+                onMouseEnter={handleInputMouseEnter}
+                onMouseLeave={handleInputMouseLeave}
+              >
+                Share
+              </button>
               <div className={styles.inputContainer}>
                 <label htmlFor="name">Name</label>
-                <input id="name" type="text" placeholder="Your Name Here" />
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Your Name Here"
+                  onMouseEnter={handleInputMouseEnter}
+                  onMouseLeave={handleInputMouseLeave}
+                />
               </div>
               <div className={styles.inputContainer}>
                 <label htmlFor="email">Email</label>
-                <input id="email" type="email" placeholder="Your Email Here" />
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Your Email Here"
+                  onMouseEnter={handleInputMouseEnter}
+                  onMouseLeave={handleInputMouseLeave}
+                />
               </div>
             </div>
           </div>
@@ -245,12 +324,51 @@ const Home = () => {
         </section>
       </section>
       <section className={styles.joinContainer}>
+        <div className={styles.animatedBlob4} ref={animationRef4}></div>
+        <div className={styles.animatedBlob5} ref={animationRef5}></div>
+        <div className={styles.animatedBlob6} ref={animationRef6}></div>
         <h1>Join The Club</h1>
         <div className={styles.buttonsContainer}>
-          <button>LinkedIn</button>
-          <button>Instagram</button>
-          <button>Telegram</button>
-          <button>Discord</button>
+          <button
+            onMouseEnter={() => {
+              handleInputMouseEnter("light");
+            }}
+            onMouseLeave={() => {
+              handleInputMouseLeave("light");
+            }}
+          >
+            LinkedIn
+          </button>
+          <button
+            onMouseEnter={() => {
+              handleInputMouseEnter("light");
+            }}
+            onMouseLeave={() => {
+              handleInputMouseLeave("light");
+            }}
+          >
+            Instagram
+          </button>
+          <button
+            onMouseEnter={() => {
+              handleInputMouseEnter("light");
+            }}
+            onMouseLeave={() => {
+              handleInputMouseLeave("light");
+            }}
+          >
+            Telegram
+          </button>
+          <button
+            onMouseEnter={() => {
+              handleInputMouseEnter("light");
+            }}
+            onMouseLeave={() => {
+              handleInputMouseLeave("light");
+            }}
+          >
+            Discord
+          </button>
         </div>
         <div className={styles.imagesContainer}>
           <div className={styles.whiteLine}></div>
@@ -269,7 +387,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className={styles.gradientContainer}></div>
     </div>
   );
 };

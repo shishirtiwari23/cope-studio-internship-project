@@ -4,10 +4,38 @@
   color: red;
 }
 .container {
+  overflow: hidden;
   .heroContainer {
+    position: relative;
+    .animatedBlob1,
+    .animatedBlob2,
+    .animatedBlob3 {
+      position: absolute;
+
+      filter: blur(5rem);
+      transform: translate(-50%, -50%) scale(3);
+      opacity: 0.7;
+      z-index: 1;
+    }
+    .animatedBlob1 {
+      top: 2%;
+      left: 20%;
+    }
+    .animatedBlob2 {
+      top: 13%;
+      left: 50%;
+      z-index: 0;
+      transform: translate(-50%, -50%) scale(1.4);
+    }
+    .animatedBlob3 {
+      top: 2%;
+      right: 0;
+    }
+
     background-color: var(--clr-purple);
     color: var(--clr-text-dark);
     header {
+      z-index: 2;
       @extend .flexRow;
       position: relative;
       text-transform: uppercase;
@@ -33,20 +61,27 @@
     }
     .mainLine {
       padding: 4% 20%;
+      z-index: 2;
+
       text-transform: uppercase;
       color: var(--clr-text-light);
       text-align: center;
       position: relative;
       h1 {
         span {
+          text-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.3);
           font-family: "Abril Fatface", cursive;
+          font-size: 7.5rem;
+          color: white !important;
         }
       }
       @media screen and (max-width: 600px) {
         padding: 4% 5%;
         margin: 30px 0px;
         h1 {
-          font-size: 5rem;
+          span {
+            font-size: 5rem;
+          }
         }
       }
     }
@@ -292,12 +327,18 @@
               @media screen and (max-width: $screen-lg) {
                 width: 150px;
               }
+              @media screen and (max-width: 600px) {
+                margin-left: 0px;
+              }
             }
           }
           .divider {
             width: 95%;
             height: 1px;
             background-color: var(--clr-text-dark);
+          }
+          @media screen and (max-width: 600px) {
+            padding: 20px 10px;
           }
         }
         .rightContainer {
@@ -322,6 +363,9 @@
             border: 2px solid #ac6eeb;
             border-radius: 10px;
             padding: 30px;
+            .sliderContainer {
+              margin: 20px 0px;
+            }
             input {
               width: 250px;
               @media screen and (max-width: 1000px) {
@@ -331,6 +375,7 @@
                 width: 100%;
               }
             }
+
             .labelsContainer {
               @extend .flexRow;
               justify-content: space-between;
@@ -464,8 +509,37 @@
     background-color: #60189a;
     padding: 5%;
     padding-top: 50px;
+    position: relative;
+    .animatedBlob4,
+    .animatedBlob5,
+    .animatedBlob6 {
+      position: absolute;
+
+      filter: blur(5rem);
+      transform: translate(-50%, -50%) scale(3);
+      opacity: 0.7;
+      z-index: 1;
+    }
+    .animatedBlob4 {
+      top: 50%;
+      left: 20%;
+    }
+    .animatedBlob5 {
+      top: 70%;
+      left: 50%;
+      z-index: 0;
+      transform: translate(-50%, -50%) scale(1.4);
+    }
+    .animatedBlob6 {
+      top: 50%;
+      right: 0;
+    }
     .buttonsContainer {
+      z-index: 2;
       margin: 20px 0px;
+    }
+    h1 {
+      z-index: 2;
     }
     button {
       cursor: pointer;
@@ -483,7 +557,9 @@
         width: 200px;
       }
     }
+    z-index: 2;
     .imagesContainer {
+      z-index: 2;
       width: 100%;
       @extend .flexRow;
       margin: 20px 0;
@@ -492,12 +568,14 @@
       }
     }
     .whiteLine {
+      z-index: 2;
       height: 10px;
       background-color: var(--clr-text-light);
       width: 100%;
     }
     .nameAndLogo {
       margin-right: auto;
+      z-index: 2;
       @extend .flexRow;
       div {
         margin-left: 10px;
@@ -517,3 +595,51 @@
   .gradientContainer {
   }
 }
+.cursorHoverLight,
+.cursorHover {
+  width: 5rem !important;
+  height: 5rem !important;
+  background-color: transparent !important;
+  border: 2px solid var(--clr-text-dark) !important;
+
+  svg {
+    opacity: 1 !important;
+    transform: rotate(0deg) !important;
+  }
+}
+.cursorHoverLight {
+  border: 2px solid var(--clr-text-light) !important;
+
+  svg {
+    stroke: var(--clr-text-light) !important;
+    opacity: 1 !important;
+    transform: rotate(0deg) !important;
+  }
+}
+
+// @media screen and (max-width: 800px) {
+//   .animatedBlob1,
+//   .animatedBlob2,
+//   .animatedBlob3 {
+//     position: absolute;
+
+//     filter: blur(5rem);
+//     transform: translate(-50%, -50%) scale(1);
+//     opacity: 0.7;
+//     z-index: 1;
+//   }
+//   .animatedBlob1 {
+//     top: 50%;
+//     left: 20%;
+//   }
+//   .animatedBlob2 {
+//     top: 70%;
+//     left: 50%;
+//     z-index: 0;
+//     transform: translate(-50%, -50%) scale(1);
+//   }
+//   .animatedBlob3 {
+//     top: 50%;
+//     right: 0;
+//   }
+// }

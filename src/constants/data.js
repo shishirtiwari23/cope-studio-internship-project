@@ -1,9 +1,11 @@
-import onBoardingPhase from "../assets/images/onBoardingPhase.svg";
-import projectPhase from "../assets/images/projectPhase.svg";
-import embedPhase from "../assets/images/embedPhase.svg";
 import code from "../assets/images/code.png";
 import network from "../assets/images/network.png";
 import freedom from "../assets/images/freedom.png";
+import {
+  OnBoardingPhase,
+  EmbedPhase,
+  ProjectPhase,
+} from "../assets/components/.";
 
 export const whyCardData = [
   {
@@ -69,7 +71,7 @@ export const howCardData = [
         </p>
       </li>,
     ],
-    image: onBoardingPhase,
+    image: <OnBoardingPhase />,
   },
   {
     id: 2,
@@ -95,7 +97,7 @@ export const howCardData = [
         </p>
       </li>,
     ],
-    image: projectPhase,
+    image: <ProjectPhase />,
   },
   {
     id: 3,
@@ -115,70 +117,95 @@ export const howCardData = [
         </p>
       </li>,
     ],
-    image: embedPhase,
+    image: <EmbedPhase />,
   },
 ];
 
-export const FAQCardData=[
+export const FAQCardData = [
   {
-    id:1,
-    title:"Do I need a team to apply?",
-    color:'#8D9CEF',
-    answer:'No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.'
+    id: 1,
+    title: "Do I need a team to apply?",
+    color: "#8D9CEF",
+    answer:
+      "No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.",
   },
   {
-    id:2,
-    title:"Do I need to build a web3 project to be eligible for the fellowship?",
-    color:'#88D387',
-    answer:'No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.'
-  },{
-    id:3,
-    title:"Can I apply to the Fellowship if I’m still in school/college?",
-    color:'#E59BD5',
-    answer:'No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.'
-  },{
-    id:4,
-    title:"Do I need a pitch deck to apply?",
-    color:'#E59BD5',
-    answer:'No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.'
-  },{
-    id:5,
-    title:"How many Fellows do you select?",
-    color:'#8D9CEF',
-    answer:'No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.'
-  },{
-    id:6,
-    title:"How does the grant work?",
-    color:'#E59BD5',
-    answer:'No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.'
-  },{
-    id:7,
-    title:"What is the Fellowship?",
-    color:'#8D9CEF',
-    answer:'No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.'
-  },{
-    id:8,
-    title:"Is there an application deadline?",
-    color:'#8D9CEF',
-    answer:'No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.'
-  },{
-    id:9,
-    title:"Do I need to have a company or is an idea enough?",
-    color:'#E59BD5',
-    answer:'No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.'
-  },{id:10,
+    id: 2,
+    title:
+      "Do I need to build a web3 project to be eligible for the fellowship?",
+    color: "#88D387",
+    answer:
+      "No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.",
+  },
+  {
+    id: 3,
+    title: "Can I apply to the Fellowship if I’m still in school/college?",
+    color: "#E59BD5",
+    answer:
+      "No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.",
+  },
+  {
+    id: 4,
+    title: "Do I need a pitch deck to apply?",
+    color: "#E59BD5",
+    answer:
+      "No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.",
+  },
+  {
+    id: 5,
+    title: "How many Fellows do you select?",
+    color: "#8D9CEF",
+    answer:
+      "No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.",
+  },
+  {
+    id: 6,
+    title: "How does the grant work?",
+    color: "#E59BD5",
+    answer:
+      "No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.",
+  },
+  {
+    id: 7,
+    title: "What is the Fellowship?",
+    color: "#8D9CEF",
+    answer:
+      "No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.",
+  },
+  {
+    id: 8,
+    title: "Is there an application deadline?",
+    color: "#8D9CEF",
+    answer:
+      "No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.",
+  },
+  {
+    id: 9,
+    title: "Do I need to have a company or is an idea enough?",
+    color: "#E59BD5",
+    answer:
+      "No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.",
+  },
+  {
+    id: 10,
 
-    title:"If I receive the Fellowship, do I need to move to San Francisco?",
-    color:'#8D9CEF',
-    answer:'No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.'
-  },{id:11,
-    title:"Do you only award Fellowships to software engineers?",
-    color:'#88D387',
-    answer:'No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.'
-  },{
-    id:12,
-    title:"What is the age limit to apply?",
-    color:'#E59BD5',
-    answer:'No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.'
-  }
-]
+    title: "If I receive the Fellowship, do I need to move to San Francisco?",
+    color: "#8D9CEF",
+    answer:
+      "No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.",
+  },
+  {
+    id: 11,
+    title: "Do you only award Fellowships to software engineers?",
+    color: "#88D387",
+    answer:
+      "No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.",
+  },
+  {
+    id: 12,
+    title: "What is the age limit to apply?",
+    color: "#E59BD5",
+    answer:
+      "No — we review and accept applicants as individuals. Most Fellows do build teams during their Fellowship — small groups of people working towards the same vision are the people who get stuff done.",
+  },
+];

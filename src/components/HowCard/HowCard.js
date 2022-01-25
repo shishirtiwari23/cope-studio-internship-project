@@ -27,9 +27,7 @@ const HowCard = ({ title, id, image, color, listItem, children }) => {
         }
         className={styles.container}
       >
-        <div className={styles.imageContainer}>
-          <img src={image} alt={title} />
-        </div>
+        <div className={styles.imageContainer}>{image}</div>
         <div className={styles.textContainer}>
           <h4>{title}</h4>
           <ul>{listItem}</ul>
