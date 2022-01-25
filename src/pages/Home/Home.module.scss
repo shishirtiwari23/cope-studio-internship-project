@@ -1,5 +1,8 @@
 @import "../../utils/commons.scss";
 
+.hehe {
+  color: red;
+}
 .container {
   .heroContainer {
     background-color: var(--clr-purple);
@@ -33,6 +36,12 @@
       text-transform: uppercase;
       color: var(--clr-text-light);
       text-align: center;
+      position: relative;
+      h1 {
+        span {
+          font-family: "Abril Fatface", cursive;
+        }
+      }
       @media screen and (max-width: 600px) {
         padding: 4% 5%;
         margin: 30px 0px;
@@ -504,5 +513,7 @@
         }
       }
     }
+  }
+  .gradientContainer {
   }
 }

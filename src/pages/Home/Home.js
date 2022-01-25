@@ -8,9 +8,32 @@ import wondering from "../../assets/images/wondering.svg";
 import commentBubble from "../../assets/images/commentBubble.svg";
 import fellowshipWelcome from "../../assets/images/fellowshipWelcome.svg";
 import lookHere from "../../assets/images/lookHere.svg";
-import { WhyCard, HowCard, FAQCard } from "../../components";
+import { WhyCard, HowCard, FAQCard, Gradient } from "../../components";
 import { whyCardData, howCardData, FAQCardData } from "../../constants/data";
+import { motion } from "framer-motion";
 
+const animation = {
+  animate: {
+    transition: {
+      delayChildren: 0.6,
+      staggerChildren: 0.4,
+      staggerDirection: 1,
+    },
+  },
+};
+
+const wordAnimation = {
+  initial: {
+    y: 400,
+  },
+  animate: {
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: [0.6, 0.01, -0.05, 0.9],
+    },
+  },
+};
 const Home = () => {
   return (
     <div className={styles.container}>
@@ -25,7 +48,21 @@ const Home = () => {
           </div>
         </header>
         <section className={styles.mainLine}>
-          <h1>I'll pay you $50,000 to build your wildest web3 idea</h1>
+          <motion.h1 variants={animation}>
+            <motion.span variants={wordAnimation}>I'll</motion.span>{" "}
+            <motion.span variants={wordAnimation}>pay</motion.span>{" "}
+            <motion.span variants={wordAnimation}>you</motion.span>{" "}
+            <motion.span variants={wordAnimation}>$50,000</motion.span>
+            <motion.span variants={wordAnimation}>to</motion.span>{" "}
+            <motion.span variants={wordAnimation}>build</motion.span>{" "}
+            <motion.span variants={wordAnimation}>your</motion.span>
+            <motion.span variants={wordAnimation}>wildest</motion.span>{" "}
+            <motion.span variants={wordAnimation}>web3</motion.span>{" "}
+            <motion.span variants={wordAnimation}>idea</motion.span>
+          </motion.h1>
+          {/* <Gradient className={styles.hehe} id="1" c1="#4AE0D7" c2="#7CB8FF" />
+          <Gradient className={styles.hehe} id="2" c1="#FFCA49" c2="#FFDB5C" />
+          <Gradient className={styles.hehe} id="3" c1="#CF9FFF" c2="#B163FF" /> */}
         </section>
         <section className={styles.whatContainer}>
           <div className={styles.imagesContainer}>
@@ -86,9 +123,19 @@ const Home = () => {
             <h1>how</h1>
             <img src={underline} alt="Underline" />
           </div>
-          <div className={styles.imageContainer}>
+          <motion.div
+            transition={{
+              repeat: Infinity,
+              duration: 0.4,
+              ease: "linear",
+              repeatType: "reverse",
+            }}
+            initial={{ x: 0, y: 0, rotate: "-5deg" }}
+            animate={{ x: 0, y: 0, rotate: "5deg" }}
+            className={styles.imageContainer}
+          >
             <img src={wondering} alt="Wondering" />
-          </div>
+          </motion.div>
         </div>
         <h4>How does the Nailwal Fellowship work?</h4>
         {howCardData.map((item) => {
@@ -222,6 +269,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <div className={styles.gradientContainer}></div>
     </div>
   );
 };
