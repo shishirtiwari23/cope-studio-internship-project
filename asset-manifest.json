@@ -1,10 +1,9 @@
 {
   "files": {
-    "main.css": "/cope-studio-internship-project/static/css/main.e7cc2382.css",
-    "main.js": "/cope-studio-internship-project/static/js/main.17250f6f.js",
+    "main.css": "/cope-studio-internship-project/static/css/main.80caee70.css",
+    "main.js": "/cope-studio-internship-project/static/js/main.d0fa9f2c.js",
     "static/js/787.453c27a8.chunk.js": "/cope-studio-internship-project/static/js/787.453c27a8.chunk.js",
     "static/media/sandeep.svg": "/cope-studio-internship-project/static/media/sandeep.476e9bc26d9c5b97f200b8f860f0ecb9.svg",
-    "static/media/onBoardingPhase.svg": "/cope-studio-internship-project/static/media/onBoardingPhase.42a1ad0f85aa56e801c2059fd4ba75c0.svg",
     "static/media/network.png": "/cope-studio-internship-project/static/media/network.ef5d03a544f8e0806fc8.png",
     "static/media/freedom.png": "/cope-studio-internship-project/static/media/freedom.7a7f86db0a82041c5e34.png",
     "static/media/code.png": "/cope-studio-internship-project/static/media/code.e908d2247a07cfded418.png",
@@ -12,19 +11,17 @@
     "static/media/wondering.svg": "/cope-studio-internship-project/static/media/wondering.5867de17c18be5821d1582c93cbc1667.svg",
     "static/media/lookHere.svg": "/cope-studio-internship-project/static/media/lookHere.ec6a41abe57ac91688b75d41b18b338d.svg",
     "static/media/logo.svg": "/cope-studio-internship-project/static/media/logo.9e3478bff08f577aafc962def48329fd.svg",
-    "static/media/embedPhase.svg": "/cope-studio-internship-project/static/media/embedPhase.d2e061207046fcc2c2af3c0bfffc9038.svg",
-    "static/media/projectPhase.svg": "/cope-studio-internship-project/static/media/projectPhase.46c17980a26c5267bb68129660285983.svg",
     "static/media/smiley.svg": "/cope-studio-internship-project/static/media/smiley.75bde3d62b7e7721320613c3865261e8.svg",
     "static/media/flower.svg": "/cope-studio-internship-project/static/media/flower.3c961ae5091ae92cd1e36453c6478dcf.svg",
     "static/media/commentBubble.svg": "/cope-studio-internship-project/static/media/commentBubble.89e447dfefbf96a7d999fd6a893c8050.svg",
     "index.html": "/cope-studio-internship-project/index.html",
     "static/media/underline.svg": "/cope-studio-internship-project/static/media/underline.6e6c5495e045efaff8be588f1436e749.svg",
-    "main.e7cc2382.css.map": "/cope-studio-internship-project/static/css/main.e7cc2382.css.map",
-    "main.17250f6f.js.map": "/cope-studio-internship-project/static/js/main.17250f6f.js.map",
+    "main.80caee70.css.map": "/cope-studio-internship-project/static/css/main.80caee70.css.map",
+    "main.d0fa9f2c.js.map": "/cope-studio-internship-project/static/js/main.d0fa9f2c.js.map",
     "787.453c27a8.chunk.js.map": "/cope-studio-internship-project/static/js/787.453c27a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7cc2382.css",
-    "static/js/main.17250f6f.js"
+    "static/css/main.80caee70.css",
+    "static/js/main.d0fa9f2c.js"
   ]
 }
